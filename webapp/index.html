@@ -11,12 +11,15 @@
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-preload="async">
+			data-sap-ui-preload="async"
+			data-sap-ui-resourceroots='{"innovdev.showcases" : "./"}'>
 		</script>
 		
 		<script>
 			sap.ui.getCore().attachInit(function() {
-				alert("SAPUI5 is ready");
+				new sap.ui.core.ComponentContainer({
+					name : "innovdev.showcases"
+				}).placeAt("content");
 			});
 		</script>
 	</head>
