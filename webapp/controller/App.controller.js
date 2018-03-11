@@ -1,10 +1,14 @@
-sap.ui.define(
-	[
-		"sap/ui/core/mvc/Controller",
-		"sap/m/MessageToast"
-	], function(Controller, MessageToast){
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast",
+	"innovdev/showcases/model/formatter"
+], function(Controller, MessageToast, formatter){
+	"use strict";
 	
-	Controller.extend("innovdev.showcases.controller.App", {
+	return Controller.extend("innovdev.showcases.controller.App", {
+		
+		formatter : formatter,
+		
 		onShowHello: function(){
 			// read msg from i18n model
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
