@@ -21,24 +21,75 @@
 								<pages>
 									<VBox renderType="Bare">
 										<Image
-											src='https://enterpriseplatformsblog.com/wp-content/uploads/2017/08/SAP-Leonardo-.jpg'
-											height="100%"/>
-										<Text
-											text="Leonardo 1"
-											class="welcomeCarouselText"/>
-									</VBox>
-									<VBox renderType="Bare">
-										<Image
 											src='https://www.mindsetconsulting.com/wp-content/uploads/2017/06/leo1-1200x503.png'
 											height="100%"/>
-										<Text
-											text="Leonardo 2"
-											class="welcomeCarouselText"/>
 									</VBox>
 								</pages>
 							</Carousel>
 			            </l:BlockLayoutCell>
 				   	</l:BlockLayoutRow>
+			   		<!-- Showcases by Category -->
+			        <l:BlockLayoutRow>
+			            <l:BlockLayoutCell id="cell-01"
+			                               title="{i18n>Category}"
+			                               titleAlignment="Left"
+			                               backgroundColorSet="ColorSet9"
+			                               backgroundColorShade="ShadeA">
+			              
+			            </l:BlockLayoutCell>
+			        </l:BlockLayoutRow>
+			        <!-- List of Categories -->
+			        <l:BlockLayoutRow>
+			            <l:BlockLayoutCell class="customCellImageBackground"
+			                               backgroundColorSet="ColorSet11"
+			                               backgroundColorShade="ShadeD">
+			            	<l:VerticalLayout>
+			            		<core:Icon
+									src="sap-icon://role"
+									size="2.5rem"
+									color="Default"/>
+			            		<Title
+									text="{i18n>cat01}"
+									titleStyle="H2"
+									class="sapUiTinyMarginTopBottom"/>
+				                <Text text="{i18n>cat01_text}"/>
+			                	<Link text="Demo Link"
+			                		press = "onNavToML"/>
+			            	</l:VerticalLayout>
+			            </l:BlockLayoutCell>
+			            <l:BlockLayoutCell class="customCellImageBackground" 
+			                               backgroundColorSet="ColorSet11"
+			                               backgroundColorShade="ShadeA">
+			            	<l:VerticalLayout>
+			            		<core:Icon
+									src="sap-icon://role"
+									size="2.5rem"
+									color="Default"/>
+			            		<Title
+									text="{i18n>cat02}"
+									titleStyle="H2"
+									class="sapUiTinyMarginTopBottom"/>
+				                <Text text="{i18n>cat02_text}"/>
+			                	<Link text="Demo Link"/>
+			            	</l:VerticalLayout>
+			            </l:BlockLayoutCell>
+			            <l:BlockLayoutCell class="customCellImageBackground" 
+			                               backgroundColorSet="ColorSet11"
+			                               backgroundColorShade="ShadeC">
+			            	<l:VerticalLayout>
+			            		<core:Icon
+									src="sap-icon://role"
+									size="2.5rem"
+									color="Default"/>
+			            		<Title
+									text="{i18n>cat03}"
+									titleStyle="H2"
+									class="sapUiTinyMarginTopBottom"/>
+				                <Text text="{i18n>cat03_text}"/>
+			                	<Link text="Demo Link"/>
+			            	</l:VerticalLayout>
+			            </l:BlockLayoutCell>
+			        </l:BlockLayoutRow>
 			   		<!-- Showcases by Technology -->
 			        <l:BlockLayoutRow>
 			            <l:BlockLayoutCell id="cell-1"
@@ -64,7 +115,8 @@
 									titleStyle="H2"
 									class="sapUiTinyMarginTopBottom"/>
 				                <Text text="{i18n>tech01_text}"/>
-			                	<Link text="Demo Link"/>
+			                	<Link text="Demo Link"
+			                		press = "onNavToML"/>
 			            	</l:VerticalLayout>
 			            </l:BlockLayoutCell>
 			            <l:BlockLayoutCell class="customCellImageBackground" 

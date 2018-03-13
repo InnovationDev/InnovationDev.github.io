@@ -9,6 +9,11 @@ sap.ui.define([
 		
 		formatter : formatter,
 		
+		onInit: function () {
+	        this.mBindingOptions = {};
+	        this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+	        this.oRouter.getTarget("Main").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
+        },
 		onShowHello: function(){
 			// read msg from i18n model
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
@@ -17,6 +22,9 @@ sap.ui.define([
 
 			// show message
 			MessageToast.show(sMsg);
+		}
+		onNavToML: function(oEvent) {
+			this.oRouter.navTo("ML");
 		}
 	});
 });
